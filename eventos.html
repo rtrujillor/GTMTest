@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script>
+            var dataLayer = [];
+
+            function addQuantity(){
+                alert("Añadimos cantidad");
+
+            };
+
+            function comprar(){
+                dataLayer.push({
+                    "event" : "purchase",
+                    "transaction" : {
+                        "id": "T12345",                         // Transaction ID. Required for purchases and refunds.
+                        "affiliation": "Online Store",
+                        "revenue": "35.43",                     // Total transaction value (incl. tax and shipping)
+                        "tax":"4.90",
+                        "shipping": "5.99",
+                        "coupon": "SUMMER_SALE",
+                        "payment" : "Paypal",
+                        "shipping":""
+                    },
+                    /* Nombres y valores delas propiedades para el dataLayer del push (pagaView) para compras
+                    transactionCard: Visa, mastercard..
+                    transactionPaymentType: tarjeta, tarjeta ECI, Paypal...
+                    transactionShippingMethod: envio a domicilio, recoger..
+                    transactionId:
+                    transactionAffiliation: Zanox
+                    transactionTotal: 35.43
+                    transactionTax : 4.90
+                    transactionShipping : 5.99
+                    transactionPromo: 3x2
+                    transactionCoupon: cupones redimidos
+                    transactionPromoType:  generico, corporativo...
+                     */
+                    "products" : [
+                        {
+                            "id":"A680792",
+                            "brand":"Nike",
+                            "price":36,
+                            "name":"API AUTOMAT - Bolsa Deporte Mediana Air Team Nike",
+                            "category": ["Deportes","Complementos","Bolsas Deporte"],
+                            "variant" : "",
+                            "quantity": 1
+                        },
+                        {
+                            "id":"A680743",
+                            "brand":"Adidas",
+                            "price":39,
+                            "name":"API AUTOMAT - Bolsa Deporte Adidas fashion",
+                            "category": ["Deportes","Complementos","Bolsas Deporte"],
+                            "variant" : "",
+                            "quantity": 2
+                        }
+                    ]
+
+                });
+            }
+        </script>
+
+        <script src="js/geci/geci.testing.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        Pagina Eventos <a href="index.html">Volver</a>
+
+        <span class="dataholder" data-json="{&#34;hierarchy&#34;:[&#34;Deportes&#34;,&#34;Complementos&#34;,&#34;Bolsas de Deporte&#34;]}" data-scope="list">
+        <ul>
+            <li>
+                <!-- ADD TO CART -->
+                <span class="dataholder" data-json="{&#34;id&#34;:&#34;A680743&#34;,&#34;brand&#34;:&#34;Google&#34;,&#34;price&#34;:15.25,&#34;name&#34;:&#34;Triblend Android T-Shirt&#34;,&#34;variant&#34;:&#34;Gray&#34;,&#34;category&#34;:[&#34;Deportes&#34;,&#34;Complementos&#34;,&#34;Aparel&#34;],&#34;quantity&#34;:1}" data-scope="product"></span>
+                <a href="#" data-product-id="A680743" data-product-url="/electronica/A15121827-testing7-videocamara-zmarca19-m19-full-hd-sdsdhc-12x" data-product-store="56" data-product-sku="A680743" class="event add" data-event="add_to_cart">Añador a la cesta producto A680743</a>
+            </li>
+            <li>
+                <!-- ADD TO CART WITH MORE THAN one -->
+                <span class="dataholder" data-json="{&#34;id&#34;:&#34;A680743&#34;,&#34;brand&#34;:&#34;Google&#34;,&#34;price&#34;:15.25,&#34;name&#34;:&#34;Triblend Android T-Shirt&#34;,&#34;variant&#34;:&#34;Gray&#34;,&#34;category&#34;:[&#34;Deportes&#34;,&#34;Complementos&#34;,&#34;Aparel&#34;],&#34;quantity&#34;:2}" data-scope="product"></span>
+                <input id='sc000000000000145804' maxlength="3" producto="000000000000145804" type="select" class="spinner ui-spinner-input" value="1" onkeypress="javascript:addQuantity();">
+                <a href="#" data-product-id="A680743" data-product-url="/electronica/A15121827-testing7-videocamara-zmarca19-m19-full-hd-sdsdhc-12x" data-product-store="56" data-product-sku="A680743" class="event add" data-event="add_to_cart">Añador a la cesta producto A680743 - N unidades</a>
+            </li>
+            <li>
+                <!-- REMOVE FROM CART -->
+                <span class="dataholder" data-json="{&#34;id&#34;:&#34;A680743&#34;,&#34;brand&#34;:&#34;Google&#34;,&#34;price&#34;:15.25,&#34;name&#34;:&#34;Triblend Android T-Shirt&#34;,&#34;variant&#34;:&#34;Gray&#34;,&#34;category&#34;:[&#34;Deportes&#34;,&#34;Complementos&#34;,&#34;Aparel&#34;]}" data-scope="product"></span>
+                <a href="#" class="event add" data-event="remove_from_cart">Eliminar de la cesta producto A680743</a>
+            </li>
+
+            <li>
+                <!-- PRODUCT CLICK -->
+                <span class="dataholder" data-json="{&#34;id&#34;:&#34;A680743&#34;,&#34;brand&#34;:&#34;Google&#34;,&#34;price&#34;:15.25,&#34;name&#34;:&#34;Triblend Android T-Shirt&#34;,&#34;variant&#34;:&#34;Gray&#34;,&#34;category&#34;:[&#34;Deportes&#34;,&#34;Complementos&#34;,&#34;Aparel&#34;]}" data-scope="product"></span>
+                <a href="#" data-product-id="A680743" data-product-url="/electronica/A15121827-testing7-videocamara-zmarca19-m19-full-hd-sdsdhc-12x" data-product-store="56" data-product-sku="A680743" class="event add" data-event="product_click">Click en producto A680743</a>
+
+            </li>
+
+            <li>
+                <!-- PROMOTION CLICK -->
+                <span class="dataholder" data-json="{&#34;id&#34;:&#34;JUNE_PROMO13&#34;,&#34;name&#34;:&#34;June Sale&#34;,&#34;creative&#34;:&#34;banner1&#34;,&#34;position&#34;:&#34;1&#34;}" data-scope="promotion"></span>
+                <a href="#" class="event add" data-event="promotion_click">Click en promocion JUNE_PROMO13</a>
+            </li>
+            <li>
+                <!-- SERGIO Ejemplo Bricor-->
+                <!--span class="dataholder" data-json="{&#34;id&#34;:&#34;000000000000005202&#34;,&#34;brand&#34;:&#34;Zmarca19&#34;,&#34;price&#34;:750,&#34;name&#34;:&#34;TESTING Videocamara Zmarca19 M19 FULL HD SD/SDHC 12X&#34;,&#34;variant&#34;:&#34;001014861101443   &#34;,&#34;category&#34;:[&#34;ElectrÃ³nica&#34;,&#34;VideocÃ¡maras&#34;,&#34;Tarjeta de Memoria / Flash&#34;]}" data-scope="product"></span>
+                <a id="linkProducto" href="#" data-product-id="000000000000005202" data-product-url="/TiendaWeb/detalle.action?idProducto=000000000000005202&amp;amp;amp;amp;idCategoria=02001001007001" data-product-sku="000406000489" data-event="product_click" class="event">Click en producto AMOLADORA ELECTRICA</a-->
+            </li>
+            <li>
+                <!-- Compra -->
+                <a href="javascript:comprar();">Comprar</a>
+            </li>
+        </ul>
+        </span>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="js/plugins.js"></script>
+        <script src="js/main.js"></script>
+
+    </body>
+</html>
